@@ -1,10 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+:root{
+    --bgcolor: white;
+    --txtcolor:black;
+    --pcolor:rgb(69, 66, 66);
+    --bgyear:#142850;
+}
 * {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
+    transition: background-color 0.5s, color 0.3s;
 }
+
+.light-mode {
+    --bgcolor: white;
+    --txtcolor:black;
+    --pcolor:rgb(69, 66, 66);
+    --bgyear:#142850;
+    
+}
+
+.dark-mode {
+    --bgcolor: #121212;
+    --txtcolor:white;
+    --pcolor:rgb(228, 215, 215);
+    --bgyear:#3e78ec;
+   
+}
+
+body{
+    background: var(--bgcolor);
+    color: var(--txtcolor);
+}
+
 
 nav {
     height: 10vh;
@@ -26,7 +54,8 @@ nav ul {
 }
 
 .top ul li a {
-    color: black;
+    
+    color: var(--txtcolor);
     text-decoration: none;
 }
 
@@ -123,15 +152,17 @@ h1 {
     padding: 20px 158px 67px 158px;
 
 }
+.posts> h3{
+    color: #121212;
+}
 
 h3 {
+    color: var(--txtcolor);
     margin: 29px 0;
 }
 
 .cardContainer {
-    /* display: flex;
-    gap: 53px;
-    align-items: center; */
+   
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -151,11 +182,12 @@ h3 {
     border-radius: 5px;
 }
 
-.card div,
-p {
+.card div,.card p {
     color: rgb(69, 66, 66);
 }
-
+.card h2, .card h3{
+    color: #121212;
+}
 .datebox {
     display: flex;
     gap: 35px;
@@ -181,7 +213,8 @@ h3 {
     font-weight: 300;
 }
 h2 >a{
-    color: black;
+  
+    color: var(--txtcolor);
     text-decoration: none;
 }
 h2 >a:hover{
@@ -219,7 +252,8 @@ h2 >a:hover{
 }
 
 .span .year {
-    background: #142850;
+    background: var(--bgyear);
+   
     color: white;
     font-weight: bold;
     padding: 5px 16px;
@@ -227,6 +261,7 @@ h2 >a:hover{
 }
 
 .workinfo p {
+    color: var(--txtcolor);
     font-size: 17px;
 }
 
