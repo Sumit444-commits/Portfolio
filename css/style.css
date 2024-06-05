@@ -4,12 +4,14 @@
     --txtcolor:black;
     --pcolor:rgb(69, 66, 66);
     --bgyear:#142850;
+    --shawdow:#EDF7FA;
+    --blur:3px;
 }
 * {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    transition: background-color 0.5s, color 0.3s;
+    transition: background-color 0.5s, color 0.3s,box-shadow 0.3s;
 }
 
 .light-mode {
@@ -17,14 +19,18 @@
     --txtcolor:black;
     --pcolor:rgb(69, 66, 66);
     --bgyear:#142850;
+    --shawdow:#EDF7FA;
+    --blur:3px;
     
 }
 
 .dark-mode {
-    --bgcolor: #121212;
+    --bgcolor: #3b3b3b;
     --txtcolor:white;
     --pcolor:rgb(228, 215, 215);
     --bgyear:#3e78ec;
+    --shawdow:#252829;
+    --blur:10px;
    
 }
 
@@ -143,7 +149,7 @@ h1 {
     height: 200px;
     width: 200px;
     object-fit: cover;
-    box-shadow: -8px 15px #EDF7FA;
+    box-shadow: -8px 17px var(--blur) 5px var(--shawdow)
 }
 
 .posts {
@@ -177,7 +183,7 @@ h3 {
 
     padding: 31px 50px;
     background: white;
-
+    box-shadow: -28px 32px 12px -10px #b3abab;
     gap: 20px;
     border-radius: 5px;
 }
@@ -303,6 +309,9 @@ footer {
     .posts>h3 {
         text-align: center;
     }
+    .image img {
+        box-shadow: -8px 17px var(--blur) 5px var(--shawdow)
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -378,7 +387,7 @@ footer {
     }
 
     p {
-        font-size: 12;
+        font-size: 12px;
     }
 
     .workinfo p {
